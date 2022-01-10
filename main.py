@@ -41,6 +41,96 @@ async def balance(ctx):
     await ctx.send(embed = em)
 
 
+@help.command()
+async def beg(ctx):
+
+    em = discord.Embed(title = "Beg", description = "Begs nearby people to donate to you.",color = ctx.author.color)
+
+    em.add_field(name = "**Syntax**", value = "~beg")
+
+    await ctx.send(embed = em)
+
+
+@help.command()
+async def withdraw(ctx):
+
+    em = discord.Embed(title = "Withdraw", description = "Withdraws money from your bank account and adds it to your wallet.",color = ctx.author.color)
+
+    em.add_field(name = "**Syntax**", value = "~withdraw [amount]")
+
+    await ctx.send(embed = em)
+
+
+@help.command()
+async def deposit(ctx):
+
+    em = discord.Embed(title = "Deposit", description = "Takes money from your wallet and deposits it to your bank account.",color = ctx.author.color)
+
+    em.add_field(name = "**Syntax**", value = "~deposit [amount]")
+
+    await ctx.send(embed = em)
+
+
+@help.command()
+async def send(ctx):
+
+    em = discord.Embed(title = "Send", description = "A P2P payment method. Sends another user some of your money.",color = ctx.author.color)
+
+    em.add_field(name = "**Syntax**", value = "~send [user] [amount]")
+
+    await ctx.send(embed = em)
+
+
+@help.command()
+async def spend(ctx):
+
+    em = discord.Embed(title = "Spend", description = "A more documented version of send. Lets you buy something from a user",color = ctx.author.color)
+
+    em.add_field(name = "**Syntax**", value = "~spend [amount] [user]")
+
+    await ctx.send(embed = em)
+
+
+@help.command()
+async def slots(ctx):
+
+    em = discord.Embed(title = "Slots", description = "Risk your money at a slot machine. If you win, you get double what you gambled. If you lose, you lose what you gambled",color = ctx.author.color)
+
+    em.add_field(name = "**Syntax**", value = "~slots [amount]")
+
+    await ctx.send(embed = em)
+
+
+@help.command()
+async def flip_coin(ctx):
+
+    em = discord.Embed(title = "Flip_Coin", description = "Flips a coin, the bot answers with heads or tails.",color = ctx.author.color)
+
+    em.add_field(name = "**Syntax**", value = "~flip_coin")
+
+    await ctx.send(embed = em)
+
+
+@help.command()
+async def roll_dice(ctx):
+
+    em = discord.Embed(title = "Roll dice", description = "The bot rolls some dice and will tell you what it lands on.",color = ctx.author.color)
+
+    em.add_field(name = "**Syntax**", value = "~roll_dice")
+
+    await ctx.send(embed = em)
+
+
+@help.command()
+async def jm(ctx):
+
+    em = discord.Embed(title = "JM", description = "If you don't know what this command does, don't worry about it. If someone refers you they will tell you.",color = ctx.author.color)
+
+    em.add_field(name = "**Syntax**", value = "~jm")
+
+    await ctx.send(embed = em)
+
+
 @client.event
 async def on_ready():
     print("The bot is ready")
