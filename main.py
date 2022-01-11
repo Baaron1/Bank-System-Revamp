@@ -230,7 +230,7 @@ async def spend(ctx,amount,member:discord.Member):
         await ctx.send("Amount must be positive!")
         return
     
-    await update_bank(ctx.author,-1*amount,"bank")
+    await update_bank(ctx.author,-1*amount,"wallet")
     await update_bank(member,amount,"bank")
     
     await ctx.send(f"You just bought something from {member} for {amount} credits")
@@ -255,7 +255,7 @@ async def send(ctx,member:discord.Member,amount = None):
         await ctx.send("Amount must be positive!")
         return
 
-    await update_bank(ctx.author,-1*amount,"bank")
+    await update_bank(ctx.author,-1*amount,"wallet")
     await update_bank(member,amount,"bank")
 
     await ctx.send(f"You gave {amount} credits!")
