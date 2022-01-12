@@ -152,7 +152,15 @@ async def balance(ctx):
     await ctx.send(embed = em)
 
 
+@client.event
+async def on_command_error(ctx, error):
+    if isinstance(error, commands.CommandOnCooldown):
+        msg = '**Still on cooldown**, please try again in {:.2f}s'.format(error.retry_after)
+        await ctx.send(msg)
+
+
 @client.command()
+@commands.cooldown(1,300,commands.BucketType.user)
 async def beg(ctx):
     await open_account(ctx.author)
 
