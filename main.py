@@ -8,7 +8,7 @@ import asyncio
 import datetime
 import json
 
-os.chdir("C:\\Users\\lgshu\\Desktop\\Python Programs\\Bank System\\tempsys\\Bank-System\\Bank-System-Revamp")
+os.chdir("C:\\Users\\lgshu\\Desktop\\BankSystem\\Bank-System-Revamp")
 
 from discord.ext.commands.bot import Bot
 from apikeys import *
